@@ -97,6 +97,7 @@ fi
 
 sysout1=$(systeminfo)
 
+# Missing error checking for multiple arguments that include -all and other parameters
 for arg1 in $*;
     do
         case $arg1 in
@@ -104,7 +105,7 @@ for arg1 in $*;
         ;;
         "-cpu") Print_CPU_2
         ;;
-        "-ram") Print_ram
+        "-ram") Print_Ram
         ;;
         "-network") Print_Mac_IP
         ;;
